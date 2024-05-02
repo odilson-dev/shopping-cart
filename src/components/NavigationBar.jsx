@@ -15,6 +15,7 @@ class NavigationBar extends Component {
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
           <Link to="/about">About</Link>
+          <box-icon name="cart-alt"></box-icon>
         </div>
       </header>
     );
