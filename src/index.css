@@ -19,7 +19,8 @@ h1 {
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 20px;
+  padding: 0 20px;
+  background-color: white;
 }
 .navigation-box-2 {
   display: flex;
@@ -33,4 +34,39 @@ header {
   text-decoration: none;
 
   margin-right: 50px;
+}
+body {
+  margin: 0;
+}
+.home {
+  background-image: url(/src/Images/image-4.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 90vh;
+  text-align: center;
+}
+a.call-to-action-btn {
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  width: 180px;
+  margin: auto;
+  padding: 10px 0;
+  background-color: rgba(62, 62, 62, 0.828);
+  transition: 500ms;
+}
+a.call-to-action-btn:hover {
+  background-color: rgba(129, 129, 129, 0.828);
+}
+.home-cover {
+  background-color: rgba(0, 0, 0, 0.359);
+  height: 100%;
+}
+
+.home h1 {
+  padding-top: 240px;
+  color: white;
+  margin-top: 0;
 }
