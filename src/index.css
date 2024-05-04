@@ -70,3 +70,35 @@ a.call-to-action-btn:hover {
   color: white;
   margin-top: 0;
 }
+
+.cart-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 100px;
+
+  padding: 70px;
+}
+.cart {
+  padding: 30px;
+}
+.cart-image {
+  border-radius: 30px;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.cart-label {
+  text-align: center;
+}
+.cart-description {
+  text-align: justify;
+}
+.form {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cart-input {
+  width: 150px;
+  height: 25px;
+}

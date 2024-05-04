@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Cart from "./Cart";
 import NavigationBar from "./NavigationBar";
 
 class Shop extends Component {
@@ -10,7 +11,12 @@ class Shop extends Component {
     return (
       <>
         <NavigationBar />
-        <h1>Hello Shop</h1>
+        <div className="cart-box">
+          <Cart />
+          <Cart />
+          <Cart />
+          <Cart />
+        </div>
       </>
     );
   }
