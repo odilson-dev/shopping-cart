@@ -10,7 +10,7 @@ class Shop extends Component {
     return (
       <>
         <NavigationBar />
-        <h1>Shop</h1>
+        <h1>Hello Shop</h1>
       </>
     );
   }
