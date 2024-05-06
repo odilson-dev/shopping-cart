@@ -13,7 +13,7 @@ class Home extends Component {
         <NavigationBar />
         <div className="home">
           <div className="home-cover">
-            <h1>Let's choose a new outfit for you!</h1>
+            <h1>Let s choose a new outfit for you!</h1>
             <Link to="/shop" className="call-to-action-btn">
               Shop Now
             </Link>
