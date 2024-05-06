@@ -1,32 +1,34 @@
 import { Component } from "react";
 
 class Cart extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div className="cart">
         <img
-          src="/src/Images/chess.png"
+          src={this.props.productDetails.image}
           alt="cart-image"
           className="cart-image"
         />
-        <p className="cart-label">Cart label</p>
+        <p className="cart-title">{this.props.productDetails.title}</p>
         <p className="cart-description">
-          {" "}
-          has been the industry standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type
-          specimen book. It has survived not only five centuries, but also the
-          leap into electronic typesetting, remaining essentially unchanged.
+          {this.props.productDetails.description.substring(0, 50)}
         </p>
         <div className="price-box">
-          $<span className="cart-price">25</span>
+          $<span className="cart-price">{this.props.productDetails.price}</span>
         </div>
 
         <form className="form">
-          <input type="number" className="cart-input" name="cart-label" id="" min="0" max="0" />
+          <input
+            type="number"
+            className="cart-input"
+            name="cart-label"
+            min="0"
+            max="100"
+          />
           <button type="button" className="add-to-cart-btn">
             Add to cart
           </button>

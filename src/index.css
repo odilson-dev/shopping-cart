@@ -84,11 +84,14 @@ a.call-to-action-btn:hover {
 .cart-image {
   border-radius: 30px;
   display: block;
-  width: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
   margin: auto;
 }
-.cart-label {
+.cart-title {
   text-align: center;
+  font-size: x-large;
 }
 .cart-description {
   text-align: justify;
