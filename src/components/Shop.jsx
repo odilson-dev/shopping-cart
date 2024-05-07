@@ -1,29 +1,40 @@
-import NavigationBar from "./NavigationBar";
-import Cart from "./Cart";
 import { useEffect, useState } from "react";
+import Cart from "./Cart";
+import NavigationBar from "./NavigationBar";
 
 function Shop() {
   const { products, error, loading } = useFakeStoreAPI();
-  const [category, setCategory] = useState("men's clothing");
-  console.log(products);
+  const [selectedCategory, setSelectedCategory] = useState("men's clothing");
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
-  const cartBox = products.map((product) => (
-    <Cart key={product.id} productDetails={product} />
-  ));
-  const handleCategoryChoice = (e) => {};
+
+  const handleCategoryChoice = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+  const cartBox = products.map((product) => {
+    if (product.category == selectedCategory) {
+      return <Cart key={product.id} productDetails={product} />;
+    }
+  });
 
   return (
     <>
       <NavigationBar />
-      <select>
-        <option value="men's clothing" selected>
-          Men's clothing
-        </option>
-        <option value="women's clothing">Women's clothing</option>
-        <option value="jewelery">Jewelery</option>
-        <option value="electronics">Electronics</option>
-      </select>
+
+      <label>
+        Category:
+        <select
+          name="category"
+          onChange={handleCategoryChoice}
+          value={selectedCategory}
+        >
+          <option value="men's clothing">Men's clothing</option>
+          <option value="women's clothing">Women's clothing</option>
+          <option value="jewelery">Jewelery</option>
+          <option value="electronics">Electronics</option>
+        </select>
+      </label>
       <div className="cart-box">{cartBox}</div>
     </>
   );
