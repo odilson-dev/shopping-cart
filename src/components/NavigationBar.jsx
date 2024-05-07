@@ -1,12 +1,16 @@
-import { Component } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import SideBar from "./SideBar";
 
-class NavigationBar extends Component {
-  constructor() {
-    super();
-  }
-  render() {
-    return (
+function NavigationBar() {
+  const [isSideBarVisible, setIsSideBarVisible] = useState(false);
+
+  const handleSideBarVisibility = () => {
+    isSideBarVisible ? setIsSideBarVisible(false) : setIsSideBarVisible(true);
+  };
+
+  return (
+    <>
       <header>
         <div className="navigation-box-1">
           <h1>Shopping-Cart</h1>
@@ -15,10 +19,18 @@ class NavigationBar extends Component {
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
           <Link to="/about">About</Link>
-          <box-icon name="cart-alt"></box-icon>
+          <box-icon
+            id="toggleButton"
+            name="cart-alt"
+            onClick={handleSideBarVisibility}
+          ></box-icon>
         </div>
       </header>
-    );
-  }
+      <SideBar
+        isVisible={isSideBarVisible}
+        handleSideBarVisibility={handleSideBarVisibility}
+      />
+    </>
+  );
 }
 export default NavigationBar;
