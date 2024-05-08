@@ -25,7 +25,9 @@ function SideBar({ isVisible, handleSideBarVisibility, listOfItems = [] }) {
         <>
           {listOfPurchasedItems}
           <p className="total">Total: ${totalPrice}</p>
-          <button type="button">Checkout</button>
+          <button className="checkout-btn" type="button">
+            Checkout
+          </button>
         </>
       );
     }

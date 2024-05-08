@@ -133,3 +133,19 @@ a.call-to-action-btn:hover {
   font-weight: bold;
   font-size: 25px;
 }
+.checkout-btn {
+  width: fit-content;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  color: #f4f4f4;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(18, 18, 18);
+  border-radius: 5px;
+  transition: 500ms;
+}
+.checkout-btn:hover {
+  background-color: #f4f4f4;
+  color: rgb(18, 18, 18);
+}
