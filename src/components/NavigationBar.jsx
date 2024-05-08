@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 
-function NavigationBar() {
+function NavigationBar({ listOfItems }) {
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
 
   const handleSideBarVisibility = () => {
@@ -29,6 +29,7 @@ function NavigationBar() {
       <SideBar
         isVisible={isSideBarVisible}
         handleSideBarVisibility={handleSideBarVisibility}
+        listOfItems={listOfItems}
       />
     </>
   );

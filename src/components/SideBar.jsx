@@ -1,4 +1,4 @@
-function SideBar({ isVisible, handleSideBarVisibility }) {
+function SideBar({ isVisible, handleSideBarVisibility, listOfItems }) {
   return (
     <div id="sidebar" className={isVisible ? "sidebar visible" : "sidebar"}>
       <div className="sidebar-header">

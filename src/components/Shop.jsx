@@ -5,6 +5,7 @@ import NavigationBar from "./NavigationBar";
 function Shop() {
   const { products, error, loading } = useFakeStoreAPI();
   const [selectedCategory, setSelectedCategory] = useState("men's clothing");
+  const [listOfItemsInCart, setListOfItemsInCart] = useState([]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
@@ -12,15 +13,29 @@ function Shop() {
   const handleCategoryChoice = (e) => {
     setSelectedCategory(e.target.value);
   };
+  const handleAddingProductToCart = (product) => {
+    // Here i'm trying to filter the list of items in the cart to prevent multiple items with same IDs
+    const newListOfItems = listOfItemsInCart.filter(
+      (item) => item.id !== product.id
+    );
+    newListOfItems.push(product);
+    setListOfItemsInCart(newListOfItems);
+  };
   const cartBox = products.map((product) => {
     if (product.category == selectedCategory) {
-      return <Cart key={product.id} productDetails={product} />;
+      return (
+        <Cart
+          key={product.id}
+          productDetails={product}
+          addToCart={handleAddingProductToCart}
+        />
+      );
     }
   });
 
   return (
     <>
-      <NavigationBar />
+      <NavigationBar listOfItems={listOfItemsInCart}/>
 
       <label>
         Category:
