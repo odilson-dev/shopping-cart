@@ -129,3 +129,7 @@ a.call-to-action-btn:hover {
   justify-content: space-between;
   align-items: center;
 }
+.total {
+  font-weight: bold;
+  font-size: 25px;
+}
