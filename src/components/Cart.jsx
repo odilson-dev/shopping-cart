@@ -17,7 +17,7 @@ class Cart extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-
+    console.log("Submit");
     this.props.addToCart({
       id: this.props.productDetails.id,
       quantity: this.state.inputValue,

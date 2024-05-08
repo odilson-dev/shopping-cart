@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import Cart from "./Cart";
-import NavigationBar from "./NavigationBar";
 
-function Shop() {
+function Shop({ handleAddingProductToCart }) {
   const { products, error, loading } = useFakeStoreAPI();
   const [selectedCategory, setSelectedCategory] = useState("men's clothing");
-  const [listOfItemsInCart, setListOfItemsInCart] = useState([]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
@@ -13,14 +11,7 @@ function Shop() {
   const handleCategoryChoice = (e) => {
     setSelectedCategory(e.target.value);
   };
-  const handleAddingProductToCart = (product) => {
-    // Here i'm trying to filter the list of items in the cart to prevent multiple items with same IDs
-    const newListOfItems = listOfItemsInCart.filter(
-      (item) => item.id !== product.id
-    );
-    newListOfItems.push(product);
-    setListOfItemsInCart(newListOfItems);
-  };
+
   const cartBox = products.map((product) => {
     if (product.category == selectedCategory) {
       return (
@@ -35,8 +26,6 @@ function Shop() {
 
   return (
     <>
-      <NavigationBar listOfItems={listOfItemsInCart}/>
-
       <label>
         Category:
         <select

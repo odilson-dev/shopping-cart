@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import NavigationBar from "./NavigationBar";
 
 class Home extends Component {
   constructor() {
@@ -10,7 +9,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <NavigationBar />
         <div className="home">
           <div className="home-cover">
             <h1>Let s choose a new outfit for you!</h1>

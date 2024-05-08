@@ -1,5 +1,4 @@
 import { Component } from "react";
-import NavigationBar from "./NavigationBar";
 
 class About extends Component {
   constructor() {
@@ -9,7 +8,6 @@ class About extends Component {
   render() {
     return (
       <>
-        <NavigationBar />
         <h1>About</h1>
       </>
     );

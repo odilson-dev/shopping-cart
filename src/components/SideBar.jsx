@@ -1,4 +1,4 @@
-function SideBar({ isVisible, handleSideBarVisibility, listOfItems }) {
+function SideBar({ isVisible, handleSideBarVisibility, listOfItems = [] }) {
   const listOfPurchasedItems = listOfItems.map((item) => {
     return (
       <div key={item.id}>
@@ -12,23 +12,34 @@ function SideBar({ isVisible, handleSideBarVisibility, listOfItems }) {
     return (accumulator += item.price * item.quantity);
   }, 0);
 
+  const handleCardDetails = () => {
+    if (listOfPurchasedItems.length == 0) {
+      return (
+        <p>
+          The Card is empty,
+          <br /> start adding items to the Cart
+        </p>
+      );
+    } else {
+      return (
+        <>
+          {listOfPurchasedItems}
+          <p className="total">Total: ${totalPrice}</p>
+          <button type="button">Checkout</button>
+        </>
+      );
+    }
+  };
+
   return (
     <div id="sidebar" className={isVisible ? "sidebar visible" : "sidebar"}>
       <div className="sidebar-header">
         <h2>Order Details</h2>
         <box-icon name="x" onClick={handleSideBarVisibility}></box-icon>
       </div>
-
-      {listOfPurchasedItems.length == 0 ? (
-        <p>
-          The Card is empty,
-          <br /> start adding items to the Cart
-        </p>
-      ) : (
-        listOfPurchasedItems
-      )}
-      <p className="total">Total: ${totalPrice}</p>
+      {handleCardDetails()}
     </div>
   );
 }
+
 export default SideBar;
