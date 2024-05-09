@@ -4,7 +4,7 @@ class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: 0,
+      inputValue: "",
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,6 +23,10 @@ class Cart extends Component {
       title: this.props.productDetails.title,
       price: this.props.productDetails.price,
     });
+    this.setState((state) => ({
+      ...state,
+      inputValue: "",
+    }));
   }
 
   render() {
@@ -48,6 +52,7 @@ class Cart extends Component {
             name="cart-label"
             min="0"
             max="100"
+            value={this.state.inputValue}
             onChange={this.handleInputChange}
           />
           <button
