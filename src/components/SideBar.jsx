@@ -1,5 +1,5 @@
 function SideBar({ isVisible, handleSideBarVisibility, listOfItems = [] }) {
-  const listOfPurchasedItems = listOfItems.map((item) => {
+  let listOfPurchasedItems = listOfItems.map((item) => {
     return (
       <div key={item.id}>
         <h3>{item.title}</h3>
@@ -11,6 +11,10 @@ function SideBar({ isVisible, handleSideBarVisibility, listOfItems = [] }) {
   const totalPrice = listOfItems.reduce((accumulator, item) => {
     return (accumulator += item.price * item.quantity);
   }, 0);
+
+  const handleCheckoutButtonClick = () => {
+    alert("Thank you for your purchase!");
+  };
 
   const handleCardDetails = () => {
     if (listOfPurchasedItems.length == 0) {
@@ -25,7 +29,11 @@ function SideBar({ isVisible, handleSideBarVisibility, listOfItems = [] }) {
         <>
           {listOfPurchasedItems}
           <p className="total">Total: ${totalPrice}</p>
-          <button className="checkout-btn" type="button">
+          <button
+            onClick={handleCheckoutButtonClick}
+            className="checkout-btn"
+            type="button"
+          >
             Checkout
           </button>
         </>
