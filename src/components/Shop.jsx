@@ -26,9 +26,10 @@ function Shop({ handleAddingProductToCart }) {
 
   return (
     <>
-      <label>
+      <label className="category-label">
         Category:
         <select
+          className="category-input"
           name="category"
           onChange={handleCategoryChoice}
           value={selectedCategory}

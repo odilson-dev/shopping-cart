@@ -12,6 +12,7 @@
 * {
   color: rgb(26, 26, 26);
 }
+/* NAVIGATION BAR */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -32,12 +33,13 @@ header {
 .navigation-box-2 a {
   font-size: 23px;
   text-decoration: none;
-
   margin-right: 50px;
 }
+
 body {
   margin: 0;
 }
+/* HERO PAGE */
 .home {
   background-image: url(/src/Images/image-4.jpg);
   background-position: center;
@@ -70,6 +72,15 @@ a.call-to-action-btn:hover {
   color: white;
   margin-top: 0;
 }
+/* CATEGORY */
+.category-label,
+.category-input {
+  font-size: 20px;
+}
+.category-input {
+  margin-left: 10px;
+}
+/* CART COMPONENT*/
 
 .cart-box {
   display: grid;
@@ -104,6 +115,23 @@ a.call-to-action-btn:hover {
 .cart-input {
   width: 150px;
   height: 25px;
+  border-radius: 5px;
+  border: 1px solid rgb(191, 191, 191);
+  height: 34px;
+
+  font-size: 20px;
+}
+.add-to-cart-btn {
+  width: 130px;
+  display: block;
+  margin: auto;
+  padding: 7px;
+  color: #f4f4f4;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(18, 18, 18);
+  border-radius: 5px;
+  transition: 500ms;
 }
 /* SIDEBAR */
 
@@ -145,7 +173,8 @@ a.call-to-action-btn:hover {
   border-radius: 5px;
   transition: 500ms;
 }
-.checkout-btn:hover {
+.checkout-btn:hover,
+.add-to-cart-btn:hover {
   background-color: #f4f4f4;
   color: rgb(18, 18, 18);
 }
