@@ -91,6 +91,8 @@ a.call-to-action-btn:hover {
 }
 .card {
   padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 3px 20px rgb(213, 213, 213);
 }
 .card-image {
   border-radius: 30px;
