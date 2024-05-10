@@ -62,6 +62,7 @@ a.call-to-action-btn {
 a.call-to-action-btn:hover {
   background-color: rgba(129, 129, 129, 0.828);
 }
+.about-cover,
 .home-cover {
   background-color: rgba(0, 0, 0, 0.359);
   height: 100%;
@@ -86,7 +87,6 @@ a.call-to-action-btn:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 100px;
-
   padding: 70px;
 }
 .cart {
@@ -177,4 +177,27 @@ a.call-to-action-btn:hover {
 .add-to-cart-btn:hover {
   background-color: #f4f4f4;
   color: rgb(18, 18, 18);
+}
+/* ABOUT */
+.about-box {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+  height: 180px;
+  padding-top: 20px;
+}
+.about-box h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+.about-box p {
+  font-size: large;
+}
+.about-cover {
+  padding-top: 100px;
+}
+.about-box a {
+  color: rgb(83, 83, 255);
+  text-decoration: none;
 }
