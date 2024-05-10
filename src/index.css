@@ -81,18 +81,18 @@ a.call-to-action-btn:hover {
 .category-input {
   margin-left: 10px;
 }
-/* CART COMPONENT*/
+/* CARD COMPONENT*/
 
-.cart-box {
+.card-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 100px;
   padding: 70px;
 }
-.cart {
+.card {
   padding: 30px;
 }
-.cart-image {
+.card-image {
   border-radius: 30px;
   display: block;
   width: 150px;
@@ -100,11 +100,11 @@ a.call-to-action-btn:hover {
   object-fit: contain;
   margin: auto;
 }
-.cart-title {
+.card-title {
   text-align: center;
   font-size: x-large;
 }
-.cart-description {
+.card-description {
   text-align: justify;
 }
 .form {
@@ -112,7 +112,7 @@ a.call-to-action-btn:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.cart-input {
+.card-input {
   width: 150px;
   height: 25px;
   border-radius: 5px;

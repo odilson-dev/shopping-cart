@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cart from "./Cart";
+import Card from "./Card";
 
 function Shop({ handleAddingProductToCart }) {
   const { products, error, loading } = useFakeStoreAPI();
@@ -15,7 +15,7 @@ function Shop({ handleAddingProductToCart }) {
   const cartBox = products.map((product) => {
     if (product.category == selectedCategory) {
       return (
-        <Cart
+        <Card
           key={product.id}
           productDetails={product}
           addToCart={handleAddingProductToCart}
@@ -40,7 +40,7 @@ function Shop({ handleAddingProductToCart }) {
           <option value="electronics">Electronics</option>
         </select>
       </label>
-      <div className="cart-box">{cartBox}</div>
+      <div className="card-box">{cartBox}</div>
     </>
   );
 }

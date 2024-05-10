@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class Cart extends Component {
+class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,24 +27,24 @@ class Cart extends Component {
 
   render() {
     return (
-      <div className="cart">
+      <div className="card">
         <img
           src={this.props.productDetails.image}
-          alt="cart-image"
-          className="cart-image"
+          alt="card-image"
+          className="card-image"
         />
-        <p className="cart-title">{this.props.productDetails.title}</p>
-        <p className="cart-description">
+        <p className="card-title">{this.props.productDetails.title}</p>
+        <p className="card-description">
           {this.props.productDetails.description.substring(0, 50)}
         </p>
         <div className="price-box">
-          $<span className="cart-price">{this.props.productDetails.price}</span>
+          $<span className="card-price">{this.props.productDetails.price}</span>
         </div>
 
         <form className="form">
           <input
             type="number"
-            className="cart-input"
+            className="card-input"
             name="cart-label"
             min="0"
             value={this.state.inputValue}
@@ -64,4 +64,4 @@ class Cart extends Component {
   }
 }
 
-export default Cart;
+export default Card;
