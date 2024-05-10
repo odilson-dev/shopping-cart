@@ -130,6 +130,9 @@ a.call-to-action-btn:hover {
   border-radius: 5px;
   transition: 500ms;
 }
+.add-to-cart-btn:hover {
+  cursor: pointer;
+}
 /* SIDEBAR */
 
 /* Style for the sidebar */
