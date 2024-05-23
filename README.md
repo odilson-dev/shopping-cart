@@ -1,4 +1,5 @@
 # React Mock Shopping Cart
+![Screenshot](./shopping-cart.png)
 
 ## Introduction
 
